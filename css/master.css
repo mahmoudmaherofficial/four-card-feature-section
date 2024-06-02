@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--Very-Light-Gray);
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  overflow: hidden;
+  min-height: 100vh;
+}
+@media (max-width:768px) {
+  body{
+    overflow-y: auto;
+  }
+}
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+main .heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 500px;
+}
+@media (max-width:768px) {
+  main{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    gap: 2rem;
+  }
+  main .heading{
+    width: 320px;
+    gap: 1rem;
+  }
+}
+main h1.tittle-1 {
+  font-weight: 200;
+  color: var(--Grayish-Blue);
+  margin: 0;
+}
+main h1.tittle-2 {
+  font-weight: 600;
+  color: var(--Very-Dark-Blue);
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+main p.des {
+  color: var(--Grayish-Blue);
+  line-height: 1.4;
+}
+@media (max-width:768px) {
+  main h1{
+    font-size: 1.5rem;
+  }
+  main p{
+    font-size: 1rem;
+  }
+}
+main .cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+}
+@media (max-width:768px) {
+  main .cards{
+    flex-direction: column;
+  }
+}
+main .cards .card {
+  background-color: #fff;
+  width: 300px;
+  height: 200px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 0.3rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 15px hsl(229deg 6% 66% / 50%);
+}
+main .cards .card::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.2rem;
+}
+.supervisor::before {
+  background-color: var(--Cyan);
+}
+.team-builder::before {
+  background-color: var(--Red);
+}
+.karma::before {
+  background-color: var(--Orange);
+}
+.calculator::before {
+  background-color: var(--Blue);
+}
+main .cards .card .name {
+  color: var(--Very-Dark-Blue);
+  font-size: 1.2rem;
+}
+main .cards .card .info {
+  color: var(--Grayish-Blue);
+  flex: 1;
+}
+main .cards .card img {
+  width: 3rem;
+  align-self: flex-end;
+}
+main .cards .middle-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
